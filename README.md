@@ -43,5 +43,5 @@ final StreamSubscription<int> subscription2 =
 
 ## Additional information
 
-[bloc](https://pub.dev/packages/bloc)
-[Single source of truth](https://en.wikipedia.org/wiki/Single_source_of_truth)
+- [bloc](https://pub.dev/packages/bloc)
+- [Single source of truth](https://en.wikipedia.org/wiki/Single_source_of_truth)
