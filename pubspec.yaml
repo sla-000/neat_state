@@ -1,6 +1,6 @@
 name: neat_state
 description: Nice and simple app global state
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/sla-000/neat_state
 
 environment:

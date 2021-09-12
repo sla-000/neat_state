@@ -15,10 +15,10 @@ Future<void> exampleBasic() async {
   print('exampleBasic: init, counter=${appState.state.counter}');
 
   print('exampleBasic: replace');
-  appState.replace(AppState(counter: appState.state.counter + 1));
+  appState.replace(appState.state.copyWith(counter: appState.state.counter + 1));
 
   print('exampleBasic: update');
-  appState.update((AppState state) => AppState(counter: state.counter + 1));
+  appState.update((AppState state) => state.copyWith(counter: state.counter + 1));
 
   final StreamSubscription<AppState> subscription1 = appState.stream.listen((AppState state) {
     print('exampleBasic:subscription1: counter=${state.counter}');
@@ -29,7 +29,7 @@ Future<void> exampleBasic() async {
   });
 
   print('exampleBasic: update 2');
-  appState.update((AppState state) => AppState(counter: state.counter + 1));
+  appState.update((AppState state) => state.copyWith(counter: state.counter + 1));
 
   await appState.stream.first;
 

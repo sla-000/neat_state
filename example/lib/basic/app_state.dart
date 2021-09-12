@@ -1,6 +1,6 @@
-// Plain, stupid immutable state. Don't use it in the real project
 import 'package:meta/meta.dart';
 
+// Plain, stupid immutable state. Don't use it in the real project
 @immutable
 class AppState {
   const AppState({
@@ -8,6 +8,14 @@ class AppState {
   });
 
   final int counter;
+
+  AppState copyWith({
+    int? counter,
+  }) {
+    return AppState(
+      counter: counter ?? this.counter,
+    );
+  }
 
   @override
   String toString() {
